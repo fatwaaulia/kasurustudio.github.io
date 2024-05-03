@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    --white-color: #FFFFFF;
+    --main-color: #02091f;
+    --blue-color: #5f7aff;
+    --gray-color: #a6adb7;
+    --border-radius: 32px;
+    --box-shadow-form-input: 0 0 0 .25rem rgb(13, 110, 253, .5);
+}
+
+.text-primary { color: var(--main-color); }
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+::-webkit-scrollbar-track {
+    background: var(--white-color)!important;
+    border-radius: var(--border-radius)!important;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--gray-color)!important;
+    border-radius: var(--border-radius)!important;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--blue-color)!important;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, span, a, div, button, label {
+    font-family: 'Manrope', sans-serif!important;
+    color: #F7F7F7;
+}
+img, video, iframe {
+    border-radius: var(--border-radius);
+}
+a, a:hover {
+    text-decoration: none!important;
+}
+a:hover {
+    color: var(--blue-color)!important;
+    transition: .2s;
+}
+
+.img-style {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+.wh-40 {
+    width: 40px!important;
+    height: 40px!important;
+}
+.wh-50 {
+    width: 50px!important;
+    height: 50px!important;
+}
+.wh-100 {
+    width: 100px!important;
+    height: 100px!important;
+}
+.wh-150 {
+    width: 150px!important;
+    height: 150px!important;
+}
+.fw-500 {font-weight: 500!important;}
+.fw-600 {font-weight: 600!important;}
+.fw-700 {font-weight: 700!important;}
+
+.text-justify {
+    text-align: justify;
+}
+
+/*--------------------------------------------------------------
+  # Bootstrap
+--------------------------------------------------------------*/
+.card,
+.accordion-item,
+.dropdown-menu {
+    box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+    border: none;
+}
+.card {
+    margin-bottom: 25px;
+    border-radius: var(--border-radius);
+}
+.invalid-feedback {
+    display: block;
+}
+.dropdown-item {
+    white-space: unset;
+}
+.btn { border-radius: var(--border-radius); }
+.btn-primary,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus,
+.form-check-input:checked {
+    background-color: var(--main-color)!important;
+    border-color: var(--main-color)!important;
+    transition: .3s;
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #ff590d!important;
+    border-color: #ff590d!important;
+}
+textarea:focus,
+input:focus,
+.form-select:focus,
+.uneditable-input:focus {
+    border-color: var(--main-color)!important;
+    box-shadow: var(--box-shadow-form-input)!important;
+}
+.dropdown-item.active, .dropdown-item:active {
+    color: var(--white-color);
+}
+.accordion-button:hover,
+.accordion-button:focus,
+.accordion-button:not(.collapsed) {
+    background-color: var(--bs-primary);
+    color: var(--white-color);
+    border-radius: var(--border-radius)!important;
+}
+.accordion-button:focus {
+    box-shadow: none!important;
+}
+.accordion-body span {
+    font-size:1rem!important;
+}
+
+/*--------------------------------------------------------------
+  # Style
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+    .pudar {
+        width: 230px!important;
+        height: 340px!important;
+    }
+    .pudar.transform-1 {
+        transform: translate(-50%, -55%) rotate(86.23deg)!important;
+    }
+    .project { padding: 30px!important; }
+}
+
+table.layanan tr {
+    border-bottom: 1px solid rgba(30, 39, 72, 1);
+}
+table.layanan tr td {
+    color: #D3DCFF;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.project {
+    border: 1px solid rgba(30, 39, 72, 1);
+    border-radius: 16px;
+    padding: 50px;
+}
+
+@keyframes fade {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.pudar {
+  position: absolute;
+  background: radial-gradient( #0542634d 50%, rgba(255, 255, 255, 0) 70%);
+  width: 430px;
+  height: 571px;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  border-radius: 50%;
+  animation: fade 4s linear infinite;
+}
+
+.btn-outline-white {
+    color: white;
+    border-color: white;
+}
