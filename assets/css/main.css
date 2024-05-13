@@ -134,19 +134,12 @@ input:focus,
   # Style
 --------------------------------------------------------------*/
 @media (max-width: 768px) {
-    .pudar {
-        width: 230px!important;
-        height: 340px!important;
-    }
-    .pudar.transform-1 {
-        transform: translate(-50%, -55%) rotate(86.23deg)!important;
-    }
     .project { padding: 30px!important; }
 }
 @media (max-width: 1200px) {
     .pudar {
-        width: 270px!important;
-        height: 380px!important;
+        width: 230px!important;
+        height: 340px!important;
     }
     .pudar.transform-1 {
         transform: translate(-50%, -55%) rotate(86.23deg)!important;
