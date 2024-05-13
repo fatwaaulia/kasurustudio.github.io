@@ -143,6 +143,15 @@ input:focus,
     }
     .project { padding: 30px!important; }
 }
+@media (max-width: 1200px) {
+    .pudar {
+        width: 270px!important;
+        height: 380px!important;
+    }
+    .pudar.transform-1 {
+        transform: translate(-50%, -55%) rotate(86.23deg)!important;
+    }
+}
 
 table.layanan tr {
     border-bottom: 1px solid rgba(30, 39, 72, 1);
