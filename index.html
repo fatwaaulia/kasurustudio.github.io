@@ -10,6 +10,7 @@
     <meta property="og:title" content="Kasuru Studio | Digital Experience & Development Solutions" />
     <meta property="og:description" content="Kasuru Studio is a digital customer experience agency that enables businesses to drive growth through innovative strategies in user experience design, data and technology.">
     
+    <meta name="description" content="Kasuru Studio is a digital customer experience agency that enables businesses to drive growth through innovative strategies in user experience design, data and technology.">
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
     <title>Kasuru Studio | Digital Experience & Development Solutions</title>
 
@@ -67,7 +68,7 @@
             <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link pe-4" href="https://wa.me/6287757150023" target="_blank">Contact</a>
-                    <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    <a class="nav-link" href="portfolio">Portfolio</a>
                 </div>
             </div>
         </div>
@@ -102,11 +103,11 @@
                 <div class="row mt-4">
                     <div class="col-12">
                         <style>
-                        #UXProductDesign, #WebAppDevelopment, #Branding, #portfolio { scroll-margin-top: 90px; }
+                        #UXProductDesign, #WebAppDevelopment, #Branding { scroll-margin-top: 90px; }
                         </style>
-                        <a href="#UXProductDesign" class="btn btn-outline-white px-4 me-2 mb-3 wow fadeInUp">UX / Product Design</a>
-                        <a href="#WebAppDevelopment" class="btn btn-outline-white px-4 me-2 mb-3 wow fadeInUp">Web App Development</a>
-                        <a href="#Branding" class="btn btn-outline-white px-4 me-2 mb-3 wow fadeInUp">Branding</a>
+                        <a href="#" data-target="UXProductDesign" class="scroll-link btn btn-outline-white px-4 me-2 mb-3 wow fadeInUp">UX / Product Design</a>
+                        <a href="#" data-target="WebAppDevelopment" class="scroll-link btn btn-outline-white px-4 me-2 mb-3 wow fadeInUp">Web App Development</a>
+                        <a href="#" data-target="Branding" class="scroll-link btn btn-outline-white px-4 me-2 mb-3 wow fadeInUp">Branding</a>
                     </div>
                 </div>
                 <div class="row">
@@ -122,7 +123,7 @@
         <div class="row">
             <div class="col-12 d-flex justify-content-between">
                 <label class="fw-600 wow fadeInUp" id="portfolio">Featured Project</label>
-                <a href="portfolio.html" class="wow fadeInUp">View All</a>
+                <a href="portfolio" class="wow fadeInUp">View All</a>
             </div>
         </div>
         <div class="row mt-5">
@@ -376,5 +377,19 @@
 
    <!-- source support -->
    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.scroll-link');
+        links.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                let targetId = this.getAttribute('data-target');
+                let targetElement = document.getElementById(targetId);
+                if (targetElement) targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    });
+    </script>
 </body>
 </html>
