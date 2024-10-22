@@ -1,9 +1,8 @@
+RewriteEngine On
+
 # Menghilangkan 'index.html' dari URL
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/([^/]+/)*index\.html [NC]
 RewriteRule ^(([^/]+/)*)(index\.html)?$ /$1 [R=301,L]
-
-# Menghilangkan .html pada akhiran dan redirect jika ada .html
-RewriteEngine On
 
 # Redirect jika ada .html di URL, arahkan ke versi tanpa .html
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html [NC]
